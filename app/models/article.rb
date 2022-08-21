@@ -9,6 +9,10 @@ class Article < ApplicationRecord
     #category_elements 1,2,3
    
     #iterar ese arreglo
+    
+    return has_categories.destroy_all if category_elements.nil? || category_elements.empty? 
+    has_categories.where.not(category_id: category_elements).destroy_all
+
     category_elements.each do |category_id|
     #crear HasCategory quien relaciona article_id: 1, con category_id: 2 por ejempli
   

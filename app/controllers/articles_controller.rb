@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all
   end
-  def show
+  def show 
 
   end
   def edit
@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
   end 
   def new 
     @article = Article.new 
-    @categories = Category.all
+    @categories = Category.all 
   end
   def update
 
