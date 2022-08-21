@@ -1,8 +1,14 @@
-<h1><%=@article.title%></h1>
-<div>
-  <%=@article.content%>
-</div>
+<div class="large-container center-block">
 
-<div>
- <%=link_to "Eliminar artículo",@article, method: :delete%>
+  <h1><%=@article.title%></h1>
+  <div>
+    <p>Escrito por <strong><%= @article.user.email%></strong></p>
+  </div>
+  <div>
+   <%=@article.content%>
+  </div>
+
+  <div>
+   <%=link_to "Eliminar artículo",@article, method: :delete%>
+  </div>
 </div>
