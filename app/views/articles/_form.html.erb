@@ -4,14 +4,18 @@
      <%=form.label :title %>
      <%=form.text_field :title %>
  </div>
- <div class="field">
+ <div>
+    <div class="mb-3">
      <%=form.label :category_elements %>
-  <div class="row">
+     </div>
+  <div class="d-flex flex-row">
       <%@categories.each do |category|%>
-      <label class="col-6 col-sm-3">
-       <%= form.check_box :category_elements, {multiple: true}, category.id, nil%>  
+      <div class="form-check me-3">
+      <%= form.check_box :category_elements, {multiple: true, class: "form-check-input"}, category.id, nil %>  
+      <label class="form-check-label field" for="flexCheckDefault"> 
        <%= category.title%> 
       </label>
+      </div>
     <%end%>
    </div>
  </div>
